@@ -1,0 +1,47 @@
+CAMPUSFIND START KARNE KA SIMPLE GUIDE
+
+1) Ye software download/install karo:
+   - Node.js LTS: https://nodejs.org/
+   - VS Code: https://code.visualstudio.com/
+   - MongoDB Community Server: https://www.mongodb.com/try/download/community
+     (ya MongoDB Atlas free account: https://www.mongodb.com/cloud/atlas)
+
+2) ZIP extract karo.
+3) VS Code kholo → File → Open Folder → CampusFind folder select karo.
+4) VS Code mein Terminal → New Terminal kholo.
+5) Command chalao:
+   npm install
+
+6) Project ke root folder mein .env.example ki copy banao aur copy ka naam .env rakho.
+   Windows mein File Explorer par hidden extensions visible rakhna; file ka naam exactly .env hona chahiye.
+7) .env file mein JWT_SECRET ko lambi random value se replace karo.
+   ADMIN_PASSWORD bhi apne private password se change karo.
+8) MongoDB local install kiya hai to ensure karo MongoDB service running hai.
+   Atlas use kar rahe ho to .env mein MONGODB_URI ko Atlas connection string se replace karo.
+9) Terminal mein:
+   npm run seed:admin
+10) Phir:
+    npm run dev
+11) Chrome mein kholo:
+    http://localhost:5000
+
+ADMIN LOGIN:
+Email: admin@campusfind.local
+Password: .env mein jo ADMIN_PASSWORD rakha hai wahi.
+Default example password ko change kiye bina use mat karna.
+
+WEBSITE USE:
+- Public: Home, Browse Items
+- Register: student account banao
+- Login: user dashboard khulega
+- Report Lost / Report Found: item report submit karo
+- Admin login: Admin dashboard se reports approve/reject karo
+- Approval ke baad items public Browse page par dikhte hain.
+- Found item par logged-in user claim submit kar sakta hai.
+- Admin claim approve kare to item Returned ho jata hai.
+
+IMPORTANT:
+- XAMPP ki zarurat nahi hai.
+- Terminal band karoge to local server ruk jayega.
+- Dobara chalane ke liye CampusFind folder mein terminal khol kar npm run dev chalao.
+- .env file kisi ko share mat karna.
